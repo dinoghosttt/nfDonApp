@@ -1,0 +1,97 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-color: lightgrey;
+    margin: 0;
+    height: 100%;
+}
+
+
+
+ul{
+    list-style: none;
+    margin: 0;   
+}
+
+.navbar{
+    inline-size: auto;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    height: 132.969px;
+}
+
+
+
+.flex-container {
+    display: flex;
+    background-color: white;
+    width:1150px;
+    height: 132.969px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(105, 111, 140);
+    flex-wrap: nowrap;
+
+
+  }
+  
+  .flex-container > li {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    font-family: "Work Sans";
+    font-size: 14px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.donate{
+    border-radius: 30px;
+    background-color: rgb(199, 162, 66);
+    border: 0;
+    color: white;
+    font-family: Work Sans;
+    font-size: 16px;
+    padding-bottom: 22px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 22px;
+    height: auto;
+    text-decoration-color: #f1f1f1;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+}
+
+.text {
+    text-decoration: none;
+    color:  rgb(105, 111, 140);
+    font-family: "Work Sans";
+    font-weight: 560;
+    font-size: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Posun logo na levou stranu */
+    padding: 0 10px; /* Volitelné, pro odsazení */
+}
+
+.logo-img {
+    height: 112.969px; /* Nastavte výšku loga podle potřeby */
+    width: auto; /* Automatické přizpůsobení šířky */
+}
+
+.spacer {
+    flex-grow: 1; /* Toto zajistí, že spacer zabere dostupný prostor */
+}
