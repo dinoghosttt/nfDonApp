@@ -1,59 +1,139 @@
-html{
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none; 
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 body{
+    font-family: "Work-sans", sans-serif;
     background-color: lightgrey;
-    margin: 0;
-    height: 100%;
+    height: 5000px;
+    padding-top: 60px;
 }
 
 
 
-ul{
-    list-style: none;
-    margin: 0;   
-}
-
-.navbar{
-    inline-size: auto;
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    height: 132.969px;
-}
-
-
-
-.flex-container {
-    display: flex;
+.header {
     background-color: white;
-    width:1150px;
-    height: 132.969px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: flex-start;
-    align-items: center;
-    color: rgb(105, 111, 140);
-    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+}
 
-
-  }
-  
-  .flex-container > li {
+.header_content {
     display: flex;
-    margin: 5px;
-    padding: 10px;
-    font-size: 30px;
-    font-family: "Work Sans";
-    font-size: 14px;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    min-height: 132.969px;
+    background-color: white; /* Nastavení bílé barvy pozadí */
+    width: 100%; /* Nastavení šířky pro centrální zarovnání */
+    max-width: 1200px; /* Maximální šířka */
+    margin: 0 auto; /* Zarovnání na střed stránky */
+    border-radius: 10px; /* Zakulacení rohů */
+    box-shadow: rgba(127, 138, 164, 0.1) 0px 0px 30px 0px; /* Lehké stínování */
+}
 
-  }
+.page {
+    margin-top: 100px;
+
+}
+
+.formspace{
+    display: grid;
+    border: black solid;
+    width: 500px;
+    place-items: center;
+    margin: auto;
+}
+
+.spacer{
+    height: 30px;
+}
+  
+.udaje{
+    margin-top: 5px;
+}
+
+.forminfo{
+    margin-top: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.cekbox{
+    margin-bottom: 12px;
+}
+
+a.checkboxinfo{
+    font-size: 70%;
+}
+
+.finfomini {
+    margin-bottom: 10px;
+}
+
+.finfomain {
+    margin-bottom: 10px;
+}
+
+.prvnikrok {
+    text-align: left; /* Zarovná texty vlevo */
+    margin-bottom: 20px; /* Přidá mezeru pod touto sekcí */
+    margin-top: 40px;
+}
+
+.popiskroku {
+    margin-top: 20px;
+}
+
+.prvnikrokform{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.castka {
+    gap: 10px;
+    display: flex;
+}
+
+.logo img {
+    max-height: 100%; /* Maximalizuje velikost obrázku v rámci rodičovského kontejneru */
+    height: 112.97px;     /* Nastaví konkrétní výšku loga */
+    width: auto;      /* Zajišťuje správný poměr stran */
+    margin-left: auto;
+}
+
+
+button.darovat {
+    width: 100%;
+    padding: 15px;
+    background-color: #2e7d32;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.darovat:hover {
+    background-color: #1b5e20;
+}
+
+
 
 .donate{
     border-radius: 30px;
@@ -61,37 +141,111 @@ ul{
     border: 0;
     color: white;
     font-family: Work Sans;
-    font-size: 16px;
-    padding-bottom: 22px;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 22px;
-    height: auto;
+    font-size: 15px;
+    padding: 22px 35px; /* Přidá padding pro konzistentní velikost */
     text-decoration-color: #f1f1f1;
     text-decoration-style: solid;
     text-decoration-thickness: auto;
+    font-weight: 450;
+    height: auto;
+    display: inline-block;
 }
 
-.text {
-    text-decoration: none;
-    color:  rgb(105, 111, 140);
-    font-family: "Work Sans";
-    font-weight: 560;
-    font-size: 16px;
+
+.nav {
+    transition: all 0.3s ease-in-out;
+
 }
 
-.logo {
+.nav_list {
     display: flex;
+    column-gap: 40px;
     align-items: center;
-    margin-right: auto; /* Posun logo na levou stranu */
-    padding: 0 10px; /* Volitelné, pro odsazení */
+    margin-left: auto;
+
 }
 
-.logo-img {
-    height: 112.969px; /* Nastavte výšku loga podle potřeby */
-    width: auto; /* Automatické přizpůsobení šířky */
+
+
+.nav_link {
+    
+    color: rgba(105, 111, 140, 0.8);
+    font-weight: 550;
+    text-decoration-style: solid;
+    font-size: 16px;
+    transition: all 0.4s;
 }
 
-.spacer {
-    flex-grow: 1; /* Toto zajistí, že spacer zabere dostupný prostor */
+.nav_link:hover,
+.nav_link:focus {
+
+    color: rgba(199, 162, 66, 1);
+
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background: black;
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav--open {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.hamburger--open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 1025px){
+    .nav {
+        position: fixed;
+        top: 127px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        padding: 10px 0 25px;
+        opacity: 0;
+        visibility: hidden;
+        height: 100%;
+        
+    }
+
+    .nav_list{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 18px;
+        margin-left: 30px;
+        margin-top: 30px;
+        
+    }
+
+    .nav_link {
+        font-size: 18px;
+        color: #C7A242;
+        font-weight: 500px;
+        
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
