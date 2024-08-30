@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, shrink-to-fit=no">
     <meta charset="UTF-8" />
     <title>WebApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-    <header class = "header">
+    <header class="header">
         <div class="header_content">
-            <a href="#" class="logo"><img src="../photo/logisko.png"></a>
+            <a href="#" class="logo"><img src="../photo/logisko.png" ></a>
 
 
             <nav class="nav">
                 <ul class="nav_list">
-                        <li class="nav_item">
-                            <a href="#onas" class="nav_link">O nás</a>
-                        </li>
-                        <li>
-                            <a href="#projekty" class="nav_link">Projekty</a>
-                        </li>
-                        <li>
-                            <a href="#kriteria" class="nav_link">Kritéria pro zařazení</a>
-                        </li>
-                        <li>
-                            <a href="#jakpomoci" class="nav_link">Jak pomoci?</a>
-                        </li>
-                        <li>
-                            <a href="#kontakt" class="nav_link">Kontakt</a>
-                        </li>
+                    <li class="nav_item">
+                        <a href="#onas" class="nav_link">O nás</a>
+                    </li>
+                    <li>
+                        <a href="#projekty" class="nav_link">Projekty</a>
+                    </li>
+                    <li>
+                        <a href="#kriteria" class="nav_link">Kritéria pro zařazení</a>
+                    </li>
+                    <li>
+                        <a href="#jakpomoci" class="nav_link">Jak pomoci?</a>
+                    </li>
+                    <li>
+                        <a href="#kontakt" class="nav_link">Kontakt</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -50,412 +56,228 @@
 
     </header>
 
-    <script src="../js/script.js"></script>    
+    <div class="spacer"></div>
+    <div class="spacer"></div>
 
-<div class="page">
+
+    <script src="../js/script.js"></script>
     
+    <div class="page">
 
-    <div class="formspace">
-        <div class="forminfo">
-            <div class="finfomini">Předáme 100% vašeho daru</div>
-            <div class="finfomain"><h1>Pomoc Barče a třem malým "Kuhajdům" po nečekané smrti táty</h1></div>
-            <div class="finfopic"><img src="/frontend/photo/family.jpeg" alt="family"></div>
-        </div>
 
-    <form id="donationForm">
+        <div class="formspace">
+            <div class="formular">
+            <div class="forminfo">
+                <div class="finfomini">Předáme 100% vašeho daru</div>
+                <div class="finfomain">
+                    <h1 class="nazevpripadu">Pomoc Barče a třem malým "Kuhajdům" po nečekané smrti táty</h1>
+                </div>
+                <div class="finfopic"><img class="finfopic" src="/photo/family2.jpg" alt="family"></div>
+            </div>
 
-        <div class="prvnikrok">
-            <div class="nazevkroku">1. Podpořte příběh</div>
-            <div class="popiskroku"><h3>Částka</h2></div>
+            <form id="donationForm">
 
-            <div class="prvnikrokform">
-                <div class="castka">
-                    <input type="radio" name="castka" value="3500">
-                    <label for="3500">3 500 Kč</label>
-                </div>
-                <div class="castka">
-                    <input type="radio" name="castka" value="2000">
-                    <label for="2000">2 000 Kč</label>
-                </div>
-                <div class="castka">
-                    <input type="radio" name="castka" value="1000">
-                    <label for="1000">1 000 Kč</label>
-                </div>
-                <div class="castka">
-                    <input type="radio" name="castka" value="600" checked>
-                    <label for="600">600 Kč</label>
-                </div>
-                <div class="castka">
-                    <input type="radio" name="castka" value="300">
-                    <label for="300">300 Kč</label>
-                </div>
-                <div class="castka">
-                    <input type="radio" name="castka" value="other">
-                    <label for="other">Jiná částka</label>
-                </div>
-                <input type="number" id="customAmount" name="customAmount" placeholder="Zadejte částku" min="1" style="display: none">
-                </div>
-        </div>
-        
-        <div class="prvnikrok">
-            <div class="nazevkroku">2. Způsob platby</div>
-            <div class="popiskroku"><h3>Způsob platby</h2></div>
+                <div class="prvnikrok">
+                    <div class="nazevkroku">1. Podpořte příběh</div>
+                    <div class="popiskroku">
+                        <h3>Částka</h2>
+                    </div>
 
-            <div class="prvnikrokform">
-                <div class="platba">
-                    <input type="radio" name="typplatby" value="3500">
-                    <label for="typplatby">Platební karta</label>
-                </div>
-                <div class="platba">
-                        <input type="radio" name="typplatby" value="2000">
-                        <label for="typplatby">Bankovní převod</label>
-                </div>
-        </div>
-
-        <div class="prvnikrok">
-            <div class="nazevkroku">3. Údaje o přispivateli</div>
-            <div class="popiskroku"><h3>Vaše údaje</h2></div>
-
-            <div class="udaje">
-                <div class="udaje">
-                    <label for="mail">Váš e-mail:</label><br>
-                    <input type="text" id="mail" name="mail"><br>
-                </div>
-                <div class="udaje">
-                    <label for="fname">Jméno:</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                </div>
-                <div class="platba">
-                    <label for="lname">Příjmení:</label><br>
-                    <input type="text" id="lname" name="lname">
-                </div>
-                
-                <div class="spacer"></div>
-                
-
-                <div class="cekbox">
-                    <input type="checkbox" id="potvrzeni" name="potvrzeni">
-                    <label for="potvrzeni">Chci vystavit potvrzení o daru</label>
-                    <div class="cekboxinfo"><a class="checkboxinfo">Dar je možné odečíst od daňového základu, potvrzení vám zašleme e-mailem.</a></div>
-
-                    <div class="udajepotvrzeni" style="display: none;">
-
-                        <div class="udaje">
-                            <label for="jmenofirma">Jméno a příjmení, nebo název firmy</label><br>
-                            <input type="text" id="jmenofirma" name="jmenofirma"><br>
+                    <div class="prvnikrokform">
+                        <div class="castka">
+                            <input type="radio" name="castka" value="3500">
+                            <label for="3500">3 500 Kč</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="adress">Ulice a číslo</label><br>
-                            <input type="text" id="adress" name="adress"><br>
+                        <div class="castka">
+                            <input type="radio" name="castka" value="2000">
+                            <label for="2000">2 000 Kč</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="city">Město</label><br>
-                            <input type="text" id="city" name="city"><br>
+                        <div class="castka">
+                            <input type="radio" name="castka" value="1000">
+                            <label for="1000">1 000 Kč</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="post">PSČ</label><br>
-                            <input type="multi" id="post" name="post"><br>
+                        <div class="castka">
+                            <input type="radio" name="castka" value="600" checked>
+                            <label for="600">600 Kč</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="donation_form_country">Stát</label><br>
-                            <select id="donation_form_country" name="donation_form[country]" class="js-country form-control">
-                                <option value=""></option>
-                                <option value="CZ" selected="selected">Česko</option>
-                                <option value="SK">Slovensko</option>
-                                <option disabled="disabled">-------------------</option>
-                                <option value="AF">Afghánistán</option>
-                                <option value="AX">Ålandy</option>
-                                <option value="AL">Albánie</option>
-                                <option value="DZ">Alžírsko</option>
-                                <option value="AS">Americká Samoa</option>
-                                <option value="VI">Americké Panenské ostrovy</option>
-                                <option value="AD">Andorra</option>
-                                <option value="AO">Angola</option>
-                                <option value="AI">Anguilla</option>
-                                <option value="AQ">Antarktida</option>
-                                <option value="AG">Antigua a Barbuda</option>
-                                <option value="AR">Argentina</option>
-                                <option value="AM">Arménie</option>
-                                <option value="AW">Aruba</option>
-                                <option value="AU">Austrálie</option>
-                                <option value="AZ">Ázerbájdžán</option>
-                                <option value="BS">Bahamy</option>
-                                <option value="BH">Bahrajn</option>
-                                <option value="BD">Bangladéš</option>
-                                <option value="BB">Barbados</option>
-                                <option value="BE">Belgie</option>
-                                <option value="BZ">Belize</option>
-                                <option value="BY">Bělorusko</option>
-                                <option value="BJ">Benin</option>
-                                <option value="BM">Bermudy</option>
-                                <option value="BT">Bhútán</option>
-                                <option value="BO">Bolívie</option>
-                                <option value="BA">Bosna a Hercegovina</option>
-                                <option value="BW">Botswana</option>
-                                <option value="BV">Bouvetův ostrov</option>
-                                <option value="BR">Brazílie</option>
-                                <option value="IO">Britské indickooceánské území</option>
-                                <option value="VG">Britské Panenské ostrovy</option>
-                                <option value="BN">Brunej</option>
-                                <option value="BG">Bulharsko</option>
-                                <option value="BF">Burkina Faso</option>
-                                <option value="BI">Burundi</option>
-                                <option value="CK">Cookovy ostrovy</option>
-                                <option value="CW">Curaçao</option>
-                                <option value="TD">Čad</option>
-                                <option value="ME">Černá Hora</option>
-                                <option value="CN">Čína</option>
-                                <option value="DK">Dánsko</option>
-                                <option value="DM">Dominika</option>
-                                <option value="DO">Dominikánská republika</option>
-                                <option value="DJ">Džibutsko</option>
-                                <option value="EG">Egypt</option>
-                                <option value="EC">Ekvádor</option>
-                                <option value="ER">Eritrea</option>
-                                <option value="EE">Estonsko</option>
-                                <option value="SZ">Eswatini</option>
-                                <option value="ET">Etiopie</option>
-                                <option value="FO">Faerské ostrovy</option>
-                                <option value="FK">Falklandské ostrovy</option>
-                                <option value="FJ">Fidži</option>
-                                <option value="PH">Filipíny</option>
-                                <option value="FI">Finsko</option>
-                                <option value="FR">Francie</option>
-                                <option value="GF">Francouzská Guyana</option>
-                                <option value="TF">Francouzská jižní území</option>
-                                <option value="PF">Francouzská Polynésie</option>
-                                <option value="GA">Gabon</option>
-                                <option value="GM">Gambie</option>
-                                <option value="GH">Ghana</option>
-                                <option value="GI">Gibraltar</option>
-                                <option value="GD">Grenada</option>
-                                <option value="GL">Grónsko</option>
-                                <option value="GE">Gruzie</option>
-                                <option value="GP">Guadeloupe</option>
-                                <option value="GU">Guam</option>
-                                <option value="GT">Guatemala</option>
-                                <option value="GG">Guernsey</option>
-                                <option value="GN">Guinea</option>
-                                <option value="GW">Guinea-Bissau</option>
-                                <option value="GY">Guyana</option>
-                                <option value="HT">Haiti</option>
-                                <option value="HM">Heardův ostrov a McDonaldovy ostrovy</option>
-                                <option value="HN">Honduras</option>
-                                <option value="HK">Hongkong – ZAO Číny</option>
-                                <option value="CL">Chile</option>
-                                <option value="HR">Chorvatsko</option>
-                                <option value="IN">Indie</option>
-                                <option value="ID">Indonésie</option>
-                                <option value="IQ">Irák</option>
-                                <option value="IR">Írán</option>
-                                <option value="IE">Irsko</option>
-                                <option value="IS">Island</option>
-                                <option value="IT">Itálie</option>
-                                <option value="IL">Izrael</option>
-                                <option value="JM">Jamajka</option>
-                                <option value="JP">Japonsko</option>
-                                <option value="YE">Jemen</option>
-                                <option value="JE">Jersey</option>
-                                <option value="ZA">Jihoafrická republika</option>
-                                <option value="GS">Jižní Georgie a Jižní Sandwichovy ostrovy</option>
-                                <option value="KR">Jižní Korea</option>
-                                <option value="SS">Jižní Súdán</option>
-                                <option value="JO">Jordánsko</option>
-                                <option value="KY">Kajmanské ostrovy</option>
-                                <option value="KH">Kambodža</option>
-                                <option value="CM">Kamerun</option>
-                                <option value="CA">Kanada</option>
-                                <option value="CV">Kapverdy</option>
-                                <option value="BQ">Karibské Nizozemsko</option>
-                                <option value="QA">Katar</option>
-                                <option value="KZ">Kazachstán</option>
-                                <option value="KE">Keňa</option>
-                                <option value="KI">Kiribati</option>
-                                <option value="CC">Kokosové ostrovy</option>
-                                <option value="CO">Kolumbie</option>
-                                <option value="KM">Komory</option>
-                                <option value="CG">Kongo – Brazzaville</option>
-                                <option value="CD">Kongo – Kinshasa</option>
-                                <option value="CR">Kostarika</option>
-                                <option value="CU">Kuba</option>
-                                <option value="KW">Kuvajt</option>
-                                <option value="CY">Kypr</option>
-                                <option value="KG">Kyrgyzstán</option>
-                                <option value="LA">Laos</option>
-                                <option value="LS">Lesotho</option>
-                                <option value="LB">Libanon</option>
-                                <option value="LR">Libérie</option>
-                                <option value="LY">Libye</option>
-                                <option value="LI">Lichtenštejnsko</option>
-                                <option value="LT">Litva</option>
-                                <option value="LV">Lotyšsko</option>
-                                <option value="LU">Lucembursko</option>
-                                <option value="MO">Macao – ZAO Číny</option>
-                                <option value="MG">Madagaskar</option>
-                                <option value="HU">Maďarsko</option>
-                                <option value="MY">Malajsie</option>
-                                <option value="MW">Malawi</option>
-                                <option value="MV">Maledivy</option>
-                                <option value="ML">Mali</option>
-                                <option value="MT">Malta</option>
-                                <option value="MA">Maroko</option>
-                                <option value="MH">Marshallovy ostrovy</option>
-                                <option value="MQ">Martinik</option>
-                                <option value="MU">Mauricius</option>
-                                <option value="MR">Mauritánie</option>
-                                <option value="YT">Mayotte</option>
-                                <option value="UM">Menší odlehlé ostrovy USA</option>
-                                <option value="MX">Mexiko</option>
-                                <option value="FM">Mikronésie</option>
-                                <option value="MD">Moldavsko</option>
-                                <option value="MC">Monako</option>
-                                <option value="MN">Mongolsko</option>
-                                <option value="MS">Montserrat</option>
-                                <option value="MZ">Mosambik</option>
-                                <option value="MM">Myanmar (Barma)</option>
-                                <option value="NA">Namibie</option>
-                                <option value="NR">Nauru</option>
-                                <option value="DE">Německo</option>
-                                <option value="NP">Nepál</option>
-                                <option value="NE">Niger</option>
-                                <option value="NG">Nigérie</option>
-                                <option value="NI">Nikaragua</option>
-                                <option value="NU">Niue</option>
-                                <option value="NL">Nizozemsko</option>
-                                <option value="NF">Norfolk</option>
-                                <option value="NO">Norsko</option>
-                                <option value="NC">Nová Kaledonie</option>
-                                <option value="NZ">Nový Zéland</option>
-                                <option value="OM">Omán</option>
-                                <option value="PK">Pákistán</option>
-                                <option value="PW">Palau</option>
-                                <option value="PS">Palestinská území</option>
-                                <option value="PA">Panama</option>
-                                <option value="PG">Papua-Nová Guinea</option>
-                                <option value="PY">Paraguay</option>
-                                <option value="PE">Peru</option>
-                                <option value="PN">Pitcairnovy ostrovy</option>
-                                <option value="CI">Pobřeží slonoviny</option>
-                                <option value="PL">Polsko</option>
-                                <option value="PR">Portoriko</option>
-                                <option value="PT">Portugalsko</option>
-                                <option value="AT">Rakousko</option>
-                                <option value="RE">Réunion</option>
-                                <option value="GQ">Rovníková Guinea</option>
-                                <option value="RO">Rumunsko</option>
-                                <option value="RU">Rusko</option>
-                                <option value="RW">Rwanda</option>
-                                <option value="GR">Řecko</option>
-                                <option value="MP">Severní Mariany</option>
-                                <option value="MK">Severní Makedonie</option>
-                                <option value="SV">Salvador</option>
-                                <option value="WS">Samoa</option>
-                                <option value="SM">San Marino</option>
-                                <option value="SA">Saúdská Arábie</option>
-                                <option value="SN">Senegal</option>
-                                <option value="KP">Severní Korea</option>
-                                <option value="SC">Seychely</option>
-                                <option value="SL">Sierra Leone</option>
-                                <option value="SG">Singapur</option>
-                                <option value="SY">Sýrie</option>
-                                <option value="SO">Somálsko</option>
-                                <option value="AE">Spojené arabské emiráty</option>
-                                <option value="GB">Spojené království</option>
-                                <option value="US">Spojené státy</option>
-                                <option value="RS">Srbsko</option>
-                                <option value="LK">Srí Lanka</option>
-                                <option value="CF">Středoafrická republika</option>
-                                <option value="SD">Súdán</option>
-                                <option value="SR">Surinam</option>
-                                <option value="SH">Svatá Helena</option>
-                                <option value="LC">Svatá Lucie</option>
-                                <option value="BL">Svatý Bartoloměj</option>
-                                <option value="KN">Svatý Kryštof a Nevis</option>
-                                <option value="MF">Svatý Martin (fr.)</option>
-                                <option value="PM">Svatý Pierre a Miquelon</option>
-                                <option value="VC">Svatý Vincenc a Grenadiny</option>
-                                <option value="ST">Svatý Tomáš a Princův ostrov</option>
-                                <option value="SN">Senegal</option>
-                                <option value="SL">Sierra Leone</option>
-                                <option value="SG">Singapur</option>
-                                <option value="SX">Sint Maarten</option>
-                                <option value="SY">Sýrie</option>
-                                <option value="SK">Slovensko</option>
-                                <option value="SI">Slovinsko</option>
-                                <option value="SO">Somálsko</option>
-                                <option value="ES">Španělsko</option>
-                                <option value="SE">Švédsko</option>
-                                <option value="CH">Švýcarsko</option>
-                                <option value="SR">Surinam</option>
-                                <option value="SJ">Špicberky a Jan Mayen</option>
-                                <option value="SZ">Svazijsko</option>
-                                <option value="TH">Thajsko</option>
-                                <option value="TW">Tchaj-wan</option>
-                                <option value="TJ">Tádžikistán</option>
-                                <option value="TZ">Tanzanie</option>
-                                <option value="TL">Východní Timor</option>
-                                <option value="TG">Togo</option>
-                                <option value="TK">Tokelau</option>
-                                <option value="TO">Tonga</option>
-                                <option value="TT">Trinidad a Tobago</option>
-                                <option value="TN">Tunisko</option>
-                                <option value="TR">Turecko</option>
-                                <option value="TM">Turkmenistán</option>
-                                <option value="TC">Turks a Caicos</option>
-                                <option value="TV">Tuvalu</option>
-                                <option value="UG">Uganda</option>
-                                <option value="UA">Ukrajina</option>
-                                <option value="UY">Uruguay</option>
-                                <option value="UZ">Uzbekistán</option>
-                                <option value="VU">Vanuatu</option>
-                                <option value="VA">Vatikán</option>
-                                <option value="VE">Venezuela</option>
-                                <option value="VN">Vietnam</option>
-                                <option value="WF">Wallis a Futuna</option>
-                                <option value="ZM">Zambie</option>
-                                <option value="ZW">Zimbabwe</option>
-                                <option value="HK">Hongkong</option>
-                                <option value="MO">Macao</option>
-                            </select>
-                            
+                        <div class="castka">
+                            <input type="radio" name="castka" value="300">
+                            <label for="300">300 Kč</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="ico">IČO</label><br>
-                            <input type="text" id="ico" name="ico"><br>
-                            <div class="cekboxinfo"><a class="checkboxinfo">Vyplňte jen v případě právnické osoby.</a></div>
-
+                        <div class="castka">
+                            <input type="radio" name="castka" value="other">
+                            <label for="other">Jiná částka</label>
                         </div>
-
-                        <div class="udaje">
-                            <label for="datepick">Datum narození</label><br>
-                            <input type="date" id="datepick" name="datepick"><br>
-                        </div>
-
-
-
 
                     </div>
+                    <div class="input-wrapper">
+                        <input type="number" id="customAmount" name="customAmount" placeholder="Zadejte částku v Kč" min="1"
+                            style="display: none">
+                        </div>
                 </div>
-                
+
+                <div class="prvnikrok">
+                    <div class="nazevkroku">2. Způsob platby</div>
+                    <div class="popiskroku">
+                        <h3>Způsob platby</h2>
+                    </div>
+
+                    <div class="druhykrokform">
+                        <div class="platba">
+                            <input type="radio" id="typplatby1" name="typplatby" value="karta">
+                            <label for="typplatby1">
+                                Platební karta
+                                <img src="/photo/visalogo.png" alt="Visa Mastercard GPay">
+                            </label>
+
+                            <input type="radio" id="typplatby2" name="typplatby" value="prevod">
+                            <label for="typplatby2">
+                                Bankovní převod
+                            <img src="/photo/transfer.png" alt="banktransfer" style="max-width: 90px;">
+                        </label>
+
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    <div class="prvnikrok">
+                        <div class="nazevkroku">3. Údaje o přispivateli</div>
+                        <div class="popiskroku">
+                            <h3>Vaše údaje</h2>
+                        </div>
+
+                        <div class="udaje">
+                            <div class="udaje">
+                                <label for="mail">Váš e-mail:</label><br>
+                                <input type="text" id="mail" name="mail"><br>
+                            </div>
+                            <div class="udaje">
+                                <label for="fname">Jméno:</label><br>
+                                <input type="text" id="fname" name="fname"><br>
+                            </div>
+                            <div class="udaje">
+                                <label for="lname">Příjmení:</label><br>
+                                <input type="text" id="lname" name="lname">
+                            </div>
+
+                            <div class="spacer"></div>
 
 
-        <button class="darovat" type="submit" id="submitButton">Přispět 600 Kč</button>
+                            <div class="cekbox">
+                                <input type="checkbox" id="potvrzeni" name="potvrzeni" class="largecheck">
+                                <label for="potvrzeni">Chci vystavit potvrzení o daru</label>
+                                <div class="cekboxinfo"><p class="checkboxinfo">Dar je možné odečíst od daňového
+                                        základu, potvrzení vám zašleme e-mailem.</p></div>
 
-    </form>
+                                <div class="udajepotvrzeni" style="display: none;">
 
-            
-    </div>
+                                    <div class="udaje">
+                                        <label for="jmenofirma">Jméno a příjmení, nebo název firmy</label><br>
+                                        <input type="text" id="jmenofirma" name="jmenofirma"><br>
+                                    </div>
+
+                                    <div class="udaje">
+                                        <label for="adress">Ulice a číslo</label><br>
+                                        <input type="text" id="adress" name="adress"><br>
+                                    </div>
+
+                                    <div class="udaje">
+                                        <label for="city">Město</label><br>
+                                        <input type="text" id="city" name="city"><br>
+                                    </div>
+
+                                    <div class="udaje">
+                                        <label for="post">PSČ</label><br>
+                                        <input type="text" id="post" name="post"><br>
+                                    </div>
 
 
-        
+
+                                    <div class="udaje">
+                                        <label for="ico">IČO</label><br>
+                                        <input type="text" id="ico" name="ico"><br>
+                                        <div class="cekboxinfo"><p class="checkboxinfo">Vyplňte jen v případě právnické
+                                                osoby.</p></div>
+
+                                    </div>
+
+                                    <div class="udaje">
+                                        <label for="datepick">Datum narození</label><br>
+                                        <input type="date" id="datepick" name="datepick"><br>
+                                    </div>
 
 
-    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                            <button class="darovat" type="submit" id="submitButton">Přispět 600 Kč</button>
+
+            </form>
+        </div>
+
+        </div>
+
+
 </div>
+
+
+    </div>
+    
+
+    </div>
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+
+        <footer class="footer">
+            <div class="footerup">
+                <div class="container">
+                    <div class="link1">
+                        <img src="/photo/logisko.png" alt="" class="logo" style="width: 113px;">
+                    </div>
+                    <div class="link2">
+                        <p>Cortex Neuro Centre je neuro-terapeutické centrum v Praze. Naší hlavní specializací jsou programy intenzivní terapie, které obvykle probíhají v tzv. cyklech, kdy je nastaven individuální terapeutický plán na základě předchozí vstupní konzultace.</p>
+                    </div>
+                    <div class="link3">
+                        <div class="adresa"><i class="fa fa-map-marker" style="font-size: 20px;"></i> Chlumčanského 497/5, Praha, 180 00</div>
+                        <div class="mail"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 15px;";></i> info@cortexneurocentre.cz</div>
+                        <div class="mob"><i class="fa fa-mobile" style="font-size: 25px;"></i> +420 702 127 286</div>
+                    </div>
+                </div>
+
+                <hr class="solid">
+                
+                <div class="fullunderlineblock">
+                <div class="underlineblock">
+                
+                    <div class="copyright">©2024 Cortexneurocentre s. r. o.</div>
+                    <div class="links">
+                        <a href="https://cortexneurocentre.cz/zasady-cookies-eu/" class="links">GDPR</a> <a href="https://cortexneurocentre.cz/wp-content/uploads/2022/12/Vseobecne-obchodni-podminky-Cortex-Neuro-Centre.docx-8.pdf" class="links">VSP</a>
+                    </div>
+    
+                </div>
+    
+                <div class="socky">
+                    <div class="facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></div>
+                     <div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                     <div class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                 </div>
+
+                </div>
+                </div>  
+    
+        </footer>
+
+
+
+
+
 </body>
+
 </html>
