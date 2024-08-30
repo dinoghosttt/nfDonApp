@@ -612,3 +612,30 @@ button.darovat:hover {
     }
     
 }
+
+
+.hidden {
+    display: none;
+}
+
+a:hover{
+    color: grey !important;
+}
+
+a:checked{
+    background-color: #C7A242;
+}
+
+.primary-color {
+    color: #C7A242;
+}
+.primary-bg {
+    background-color: #C7A242;
+}
+.primary-border {
+    border-color: #C7A242;
+}
+.count-up {
+    font-size: 2rem;
+    color: #C7A242;
+}

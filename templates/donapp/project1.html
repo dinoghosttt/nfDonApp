@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <title>WebApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function showSection(section) {
+            document.getElementById('project-info').classList.add('hidden');
+            document.getElementById('faq').classList.add('hidden');
+            document.getElementById(section).classList.remove('hidden');
+        }
+
+        function toggleFaq(faqId) {
+            const faq = document.getElementById(faqId);
+            const arrow = document.getElementById(faqId + '-arrow');
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                arrow.classList.add('fa-chevron-up');
+                arrow.classList.remove('fa-chevron-down');
+            } else {
+                faq.classList.add('hidden');
+                arrow.classList.add('fa-chevron-down');
+                arrow.classList.remove('fa-chevron-up');
+            }
+        }
+
+        function showSharePopup() {
+            document.getElementById('share-popup').classList.remove('hidden');
+        }
+
+        function hideSharePopup() {
+            document.getElementById('share-popup').classList.add('hidden');
+        }
+
+        function copyLink() {
+            const link = window.location.href;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Link copied to clipboard');
+            });
+        }
+
+        function countUp(target, start, end, duration, step = 1) {
+    let current = start;
+    const range = end - start;
+    const stepTime = Math.abs(Math.floor(duration / Math.abs(range / step)));
+    const obj = document.getElementById(target);
+
+    const timer = setInterval(() => {
+        current += step;
+        
+        // Ošetření překročení koncového čísla
+        if ((step > 0 && current >= end) || (step < 0 && current <= end)) {
+            current = end;
+            clearInterval(timer);
+        }
+        
+        obj.textContent = current.toLocaleString() + ' Kč';
+    }, stepTime);
+}
+
+window.onload = function() {
+    countUp('raised-amount', 0, 855000, 1000, 5000); // Zde můžete zadat požadovaný krok
+}
+
+
+function shareOnFacebook() {
+        const url = encodeURIComponent(window.location.href);
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        window.open(facebookShareUrl, '_blank');
+    }
+
+    function shareOnWhatsApp() {
+        const url = encodeURIComponent(window.location.href);
+        const whatsappShareUrl = `https://wa.me/?text=${url}`;
+        window.open(whatsappShareUrl, '_blank');
+    }
+
+    function copyLink() {
+        const link = window.location.href;
+        navigator.clipboard.writeText(link).then(() => {
+            alert('Link copied to clipboard');
+        });
+    }
+
+    function hideSharePopup() {
+        document.getElementById('share-popup').classList.add('hidden');
+    }
+
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_content">
+            <a href="#" class="logo"><img src="../../static/photo/logisko.png" ></a>
+
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="project1.html" class="nav_link">O nás</a>
+                    </li>
+                    <li>
+                        <a href="#projekty" class="nav_link">Projekty</a>
+                    </li>
+                    <li>
+                        <a href="#kriteria" class="nav_link">Kritéria pro zařazení</a>
+                    </li>
+                    <li>
+                        <a href="#jakpomoci" class="nav_link">Jak pomoci?</a>
+                    </li>
+                    <li>
+                        <a href="#kontakt" class="nav_link">Kontakt</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <button class="donate" onclick="location.href='index.html'">CHCI PŘISPĚT</button>
+
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+    <script src="../../static/js/script.js"></script>
+
+    <page class="page">
+
+
+    
+
+<body class="p-8">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Pomozte nám obnovit sklářskou huť JaP po povodních.</h1>
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-2/3">
+                <div class="relative">
+                    <img src="../../static/photo/uvodnifoto.jpg" alt="People working in a glass workshop" class="w-full h-auto">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 md:pl-8 mt-4 md:mt-0">
+                <p class="text-lg mb-4 flex items-center justify-center">Cortex - Pro první krok</p>
+                              <div class="mb-4">
+                    <div class="flex items-center justify-center mb-1">
+                        <span class="text-lg text-gray-500">Na tuto sbírku již bylo vybráno</span>
+                    </div>
+                    <div class="flex items-center justify-center mb-1">
+                        <span id="raised-amount" class="count-up">0 Kč</span>
+                    </div>
+                </div>
+                <button class="w-full primary-bg text-white py-2 rounded mb-4" onclick="location.href='index.html'">PODPOŘIT</button>
+                <button class="w-full border primary-border primary-color py-2 rounded" onclick="showSharePopup()">SDÍLET</button>
+            </div>
+        </div>
+        <div id="project-info" class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">O projektu</h2>
+            <p class="mb-4">Kritéria pro zařazení do nadačního fondu zahrnují děti ve věku 0-15 let, které byly diagnostikovány s neurologickými obtížemi, jako jsou například.:</p>
+            <p class="mb-4">Dětská mozková obrna, spinální muskulární atrofie, Downův syndrom nebo genetické vady.</p>
+            <p class="mb-4">Vaše dary budou použity na:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <img src="../../static/photo/projekt1/1.jpg" alt="Glass workshop image 1" class="w-full h-auto">
+                <img src="../../static/photo/projekt1/2.jpg" alt="Glass workshop image 2" class="w-full h-auto">
+                <img src="../../static/photo/projekt1/3.jpg" alt="Glass workshop image 3" class="w-full h-auto">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="../../static/photo/projekt1/4.jpg" alt="Infobox image 1" class="w-full h-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Infobox 1</h3>
+                    <p class="text-gray-700">Informace o projektu Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe iste obcaecati voluptas inventore iusto, perspiciatis suscipit qui impedit a, rerum itaque laborum adipisci dolore illo. Officiis obcaecati odit sequi!</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="../../static/photo/projekt1/6.jpg" alt="Infobox image 2" class="w-full h-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Infobox 2</h3>
+                    <p class="text-gray-700">Informace o projektu Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe iste obcaecati voluptas inventore iusto, perspiciatis suscipit qui impedit a, rerum itaque laborum adipisci dolore illo. Officiis obcaecati odit sequi!</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="../../static/photo/projekt1/7.jpg" alt="Infobox image 3" class="w-full h-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Infobox 3</h3>
+                    <p class="text-gray-700">Informace o projektu Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe iste obcaecati voluptas inventore iusto, perspiciatis suscipit qui impedit a, rerum itaque laborum adipisci dolore illo. Officiis obcaecati odit sequi!</p>
+                </div>
+            </div>
+        </div>
+        <div id="faq" class="hidden mt-8">
+            <h2 class="text-2xl font-bold mb-4">Časté otázky</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold mb-2 cursor-pointer" onclick="toggleFaq('faq1')">Jak mohu přispět? <i id="faq1-arrow" class="fas fa-chevron-down"></i></h3>
+                <p id="faq1" class="text-gray-700 hidden">Můžete přispět kliknutím na tlačítko "PODPOŘIT" a následováním pokynů pro darování.</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold mb-2 cursor-pointer" onclick="toggleFaq('faq2')">Kam půjdou mé peníze? <i id="faq2-arrow" class="fas fa-chevron-down"></i></h3>
+                <p id="faq2" class="text-gray-700 hidden">Vaše příspěvky budou použity na rekonstrukci hlavní tavící pece, opravu poškozených strojů a zařízení, obnovu pracovních prostor a podporu našich zaměstnanců během obnovy.</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold mb-2 cursor-pointer" onclick="toggleFaq('faq3')">Jak mohu sledovat pokrok projektu? <i id="faq3-arrow" class="fas fa-chevron-down"></i></h3>
+                <p id="faq3" class="text-gray-700 hidden">Aktualizace o pokroku projektu budou pravidelně zveřejňovány na této stránce v sekci "Projekt".</p>
+            </div>
+        </div>
+    </div>
+
+<div id="share-popup" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h3 class="text-xl font-bold mb-4">Sdílet projekt</h3>
+        <div class="flex justify-around mb-4">
+            <a href="#" class="text-blue-600" onclick="shareOnFacebook()"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-green-600" onclick="shareOnWhatsApp()"><i class="fab fa-whatsapp fa-2x"></i></a>
+            <!-- Instagram nemá přímé sdílení, můžete odkázat na Instagram profil nebo použít jinou službu -->
+        </div>
+        <button class="w-full bg-gray-200 text-gray-700 py-2 rounded mb-4" onclick="copyLink()">Kopírovat odkaz</button>
+        <button class="w-full primary-bg text-white py-2 rounded" onclick="hideSharePopup()">Zavřít</button>
+    </div>
+</div>
+
+</body>
+
+        
+    </page>
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+
+    <footer class="footer">
+        <div class="footerup">
+            <div class="container">
+                <div class="link1">
+                    <img src="../../static/photo/logisko.png" alt="" class="logo" style="width: 113px;">
+                </div>
+                <div class="link2">
+                    <p>Cortex Neuro Centre je neuro-terapeutické centrum v Praze. Naší hlavní specializací jsou programy intenzivní terapie, které obvykle probíhají v tzv. cyklech, kdy je nastaven individuální terapeutický plán na základě předchozí vstupní konzultace.</p>
+                </div>
+                <div class="link3">
+                    <div class="adresa"><i class="fa fa-map-marker" style="font-size: 20px;"></i> Chlumčanského 497/5, Praha, 180 00</div>
+                    <div class="mail"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 15px;";></i> info@cortexneurocentre.cz</div>
+                    <div class="mob"><i class="fa fa-mobile" style="font-size: 25px;"></i> +420 702 127 286</div>
+                </div>
+            </div>
+
+            <hr class="solid">
+            
+            <div class="fullunderlineblock">
+            <div class="underlineblock">
+            
+                <div class="copyright">©2024 Cortexneurocentre s. r. o.</div>
+                <div class="links">
+                    <a href="https://cortexneurocentre.cz/zasady-cookies-eu/" class="links">GDPR</a> <a href="https://cortexneurocentre.cz/wp-content/uploads/2022/12/Vseobecne-obchodni-podminky-Cortex-Neuro-Centre.docx-8.pdf" class="links">VSP</a>
+                </div>
+
+            </div>
+
+            <div class="socky">
+                <div class="facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></div>
+                 <div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                 <div class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+             </div>
+
+            </div>
+            </div>  
+
+    </footer>
+</body>
